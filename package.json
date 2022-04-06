@@ -1,7 +1,7 @@
 {
   "name": "rest-rant",
   "version": "1.0.0",
-  "description": "",
+  "description": "| Method | Path | Purpose |\r | ------ | ------------------------------------- | ----------------------------- |\r | GET | `/` | The home page |\r | GET | `/places` | Index page listing all places |\r | GET | `/places/new` | New form for a place |\r | POST | `/places` | Create a new place |\r | GET | `/places/:id` | Show one place in detail (Associated rants, new rant form, delete rant button) |\r | GET | `/places/:id/edit` | Edit form for a place |\r | PUT | `/places/:id` | Make changes to existing place |\r | DELETE | `/places/:id` | Delete a place |\r | POST | `/places/:id/rant` | Add rant to a place |\r | DELETE | `/places/:id/rant/:rantId` | Delete a rant |",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,14 @@
     "express-react-views": "^0.11.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awhiteGITHUB/project-REST-rant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/awhiteGITHUB/project-REST-rant/issues"
+  },
+  "homepage": "https://github.com/awhiteGITHUB/project-REST-rant#readme"
 }
