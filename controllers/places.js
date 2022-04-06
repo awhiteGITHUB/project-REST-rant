@@ -1,6 +1,10 @@
 const router = require('express').Router()
 //const app = express()
 
+router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+
 router.get('/', (req, res) => {
    // res.send('GET /places')
 
@@ -23,6 +27,8 @@ router.get('/', (req, res) => {
 
 
       res.render('places/index', { places })
+
+      
 
 })
   
