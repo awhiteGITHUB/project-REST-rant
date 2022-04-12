@@ -9,7 +9,7 @@ No Comments yet!
 </h2>
  )
 
-    if (data.place.comments.length) {
+    if (data.place.comments) {
         comments = data.place.comments.map(c => {
         return (
             <div className='border'>
@@ -33,9 +33,7 @@ No Comments yet!
             <h3>Rating</h3>
             <h3>Not Rated</h3>
             <h3>Description</h3>
-            <h3>
-            {data.place.showEstablished()}
-            </h3>
+          
             <h4>
                 Serving {data.place.cuisines}
             </h4>
@@ -65,7 +63,7 @@ No Comments yet!
             <div className="row">
             <div className="form-group col-sm-6">
             <label htmlFor="stars">Star Rating</label>
-            <input type="range" class="form-range" step="8.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+            <input type="range" className="form-range" step="8.5" min="1" max="5" id="stars" name="stars" className="form-control" />
             </div>
             <div className="form-group col-sm-2">
             <label htmlFor="rant">Rant?</label>
