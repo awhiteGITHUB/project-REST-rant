@@ -13,7 +13,7 @@ function edit_form (data) {
                 id="name" 
                 name="name" 
                 value={data.place.name}
-               // onChange={ (event) => console.log("onchange is triggered")}
+               onChange={ (event) => console.log("onchange is triggered")}
                 required />
                 </div>
            
