@@ -9,11 +9,11 @@ No Comments yet!
 </h2>
  )
 
-    if (data.place.comments) {
+    if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
         return (
             <div className='border'>
-            <h2 className='rant'> {c.rant ? 'Rant! ':'Rave!'}</h2>
+            <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
             <h4>{c.content}</h4>
             <strong> - {c.content}</strong>
             <h4> Rating: {c.stars}</h4>
@@ -54,27 +54,34 @@ No Comments yet!
                 {comments}       
             <form action={'/places/${data.places.id}/comment'} method="POST">
             <div className="row">
-            <div className="form-group col-sm-6">
+            <div className="form-group col-sm-12">
             <label htmlFor="content">Content</label>
             <textarea id="content" name="content" className="form-control"></textarea>
             </div>
             </div>
+            <form action={'/places/${data.places.id}/author'} method="POST"></form>
             <div className="row">
-            <div className="form-group col-sm-6">
+            <div className="form-group col-sm-12">
             <label htmlFor="author">Author</label>
             <input id="author" name="author" className="form-control"/>
             </div>
+            </div>
             <div className="row">
-            <div className="form-group col-sm-6">
+            <div className="form-group col-sm-12">
             <label htmlFor="stars">Star Rating</label>
-            <input type="range" className="form-range" step="8.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+            <input type="range"  id="stars" name="stars" min="1" max="5" />
             </div>
-            <div className="form-group col-sm-2">
+            <div className="row">
+            <div className="form-group col-sm-12">
             <label htmlFor="rant">Rant?</label>
-            <input type="checkbox" id="rant" name="rant" className="form-control"/>
+            <input type="checkbox" id="rant" name="rant"/>
             </div>
             </div>
-            <input type="submit" className="btn btn-primary" value="Add Comment" />         
+            <div className="row">
+            <div className="form-group col-sm-20">
+            <input type="submit" className="btn btn-primary" value="Add Comment" /> 
+            </div>        
+             </div>
              </div>
              </form>
             </main>
